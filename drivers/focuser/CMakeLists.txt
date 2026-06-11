@@ -121,13 +121,6 @@ add_executable(indi_myfocuserpro2_focus ${myfocuserpro2_SRC})
 target_link_libraries(indi_myfocuserpro2_focus indidriver)
 install(TARGETS indi_myfocuserpro2_focus RUNTIME DESTINATION bin)
 
-# ############### MyFocuserPro2_1 Focuser ################
-SET(myfocuserpro2_1_SRC
-    myfocuserpro2_1.cpp)
-
-add_executable(indi_myfocuserpro2_1_focus ${myfocuserpro2_1_SRC})
-target_link_libraries(indi_myfocuserpro2_1_focus indidriver)
-install(TARGETS indi_myfocuserpro2_1_focus RUNTIME DESTINATION bin)
 # ############### OnFocus Focuser ################
 SET(onfocus_SRC
     onfocus.cpp)
