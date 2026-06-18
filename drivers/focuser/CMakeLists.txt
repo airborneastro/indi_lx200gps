@@ -121,6 +121,13 @@ add_executable(indi_myfocuserpro2_focus ${myfocuserpro2_SRC})
 target_link_libraries(indi_myfocuserpro2_focus indidriver)
 install(TARGETS indi_myfocuserpro2_focus RUNTIME DESTINATION bin)
 
+# ############### MyFocuserPro2_1 Focuser ################
+SET(myfocuserpro2_1_SRC
+    myfocuserpro2_1.cpp)
+
+add_executable(indi_myfocuserpro2_1_focus ${myfocuserpro2_1_SRC})
+target_link_libraries(indi_myfocuserpro2_1_focus indidriver)
+install(TARGETS indi_myfocuserpro2_1_focus RUNTIME DESTINATION bin)
 # ############### OnFocus Focuser ################
 SET(onfocus_SRC
     onfocus.cpp)
@@ -154,16 +161,6 @@ SET(sesto2_SRC
 add_executable(indi_sestosenso2_focus ${sesto2_SRC})
 target_link_libraries(indi_sestosenso2_focus indidriver ${JSONLIB})
 install(TARGETS indi_sestosenso2_focus RUNTIME DESTINATION bin)
-
-# ############### Sesto Senso 3 Focuser ################
-SET(sesto3_SRC
-    sestosenso3.cpp
-    primalucacommandset.cpp
-)
-
-add_executable(indi_sestosenso3_focus ${sesto3_SRC})
-target_link_libraries(indi_sestosenso3_focus indidriver ${JSONLIB})
-install(TARGETS indi_sestosenso3_focus RUNTIME DESTINATION bin)
 
 # ############### Esatto Focuser ################
 SET(esatto_SRC
@@ -410,10 +407,3 @@ add_executable(indi_activefocuser_focus ${activefocuser_SRC})
 
 target_link_libraries(indi_activefocuser_focus indidriver ${HIDAPILIB})
 install(TARGETS indi_activefocuser_focus RUNTIME DESTINATION bin)
-# ############### Alpaca Focuser ################
-SET(alpaca_focuser_SRC
-    indi_alpaca_focuser.cpp)
-
-add_executable(indi_alpaca_focuser ${alpaca_focuser_SRC})
-target_link_libraries(indi_alpaca_focuser indidriver ${HTTPLIB_LIBRARY})
-install(TARGETS indi_alpaca_focuser RUNTIME DESTINATION bin)
